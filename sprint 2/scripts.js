@@ -16,7 +16,7 @@ unitToggle.addEventListener("change", () => {
     loadDefaultCities();
 });
 
-// Task 1: submit event (also covers Enter key)
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const city = cityInput.value.trim();
@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
     getWeather(city);
 });
 
-// Task 3: switch statement for background based on weather condition
+
 function getWeatherBackground(main) {
     switch (main) {
         case "Clear":
@@ -51,7 +51,7 @@ function getWeatherBackground(main) {
     }
 }
 
-// Task 1 & 2: fetch with dynamic cityName and units param
+
 async function getWeather(city) {
     const units = isMetric ? "metric" : "imperial";
     const unitSymbol = isMetric ? "°C" : "°F";
@@ -73,7 +73,7 @@ async function getWeather(city) {
 
         const data = await response.json();
 
-        // Task 3: apply background
+        
         getWeatherBackground(data.weather[0].main);
 
         weatherResult.innerHTML = `
@@ -102,7 +102,7 @@ async function getWeather(city) {
     }
 }
 
-// Task 4: load a single city card
+
 async function loadCityCard(city, cardId) {
     const units = isMetric ? "metric" : "imperial";
     const unitSymbol = isMetric ? "°C" : "°F";
@@ -135,7 +135,7 @@ async function loadCityCard(city, cardId) {
     }
 }
 
-// Task 4: load all 3 default cities
+
 function loadDefaultCities() {
     document.getElementById("card-istanbul").innerHTML = "Loading...";
     document.getElementById("card-kyrenia").innerHTML = "Loading...";
