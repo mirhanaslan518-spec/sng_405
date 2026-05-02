@@ -1,0 +1,203 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a2e, #467ac2);
+    color: #f0f0f0;
+    margin: 0;
+    padding: 3rem 1rem;
+    min-height: 100vh;
+    
+}
+
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 233, 255, 0.74);
+    padding: 1.75rem;
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+}
+
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    gap: .5rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: .65rem 1rem;
+    border-radius: .5rem;
+    font-size: 15px;
+    color: #212d3a;
+}
+
+input[type="text"]::placeholder {
+    color: #1c262e;
+}
+
+input[type="text"]:focus {
+    border-color: #fff;
+    background: #fff;
+}
+
+button {
+    padding: .65rem 1.2rem;
+    
+    background: #fff;
+    color: #1a1a2e;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+
+.toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .5rem;
+    margin-top: .75rem;
+    font-size: 13px;
+}
+
+.toggle-label {
+    font-weight: 600;
+    color:  #fff;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.35rem;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background:  #7b95b3;
+    border-radius: 99px;
+    cursor: pointer;
+    
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: .18rem;
+    top: .18rem;
+    background: #fff;
+    border-radius: 50%;
+    
+}
+
+.switch input:checked + .slider {
+    background: #7b95b3;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(1.1rem);
+}
+
+#weatherResults {
+    margin-top: 1.25rem;
+    text-align: left;
+}
+
+#weatherResults h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: .75rem;
+}
+
+.results {
+    width: 75%;
+    margin: auto;
+}
+
+.weatherResult {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .3rem;
+    font-size: 20px;
+}
+
+.weatherResult i {
+    width: 1.1rem;
+    opacity: .75;
+}
+
+
+hr {
+    margin: 1.5rem 0 1rem;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.default-cities h3 {
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: .75rem;
+}
+
+.city-cards {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.city-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: .6rem;
+    padding: .75rem 1rem;
+    text-align: left;
+    font-size: 14px;
+    
+}
+
+.city-card .card-city {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: .15rem;
+}
+
+.city-card .card-temp {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.city-card .card-desc {
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+.city-card .card-stats {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+    margin-top: .25rem;
+}
+
